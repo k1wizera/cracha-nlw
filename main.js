@@ -1,7 +1,7 @@
 const linksSocialMedia = {
   linkedin: 'in/otafaria',
   facebook: 'otavio.a.faria',
-  github: 'k1wizera'
+  github: 'zGroda'
 }
 
 function changeSocialMediaLinks() {
@@ -12,3 +12,18 @@ function changeSocialMediaLinks() {
   }
 }
 changeSocialMediaLinks()
+
+function getGitHubProfileInfos() {
+  const url = `http://api.github.com/users/${linksSocialMedia.github}`
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      userName.textContent = data.name
+      userBio.textContent = data.bio
+      userLink.href = data.html_url
+      userImage.src = data.avatar_url
+      userLogin.textContent = data.login
+    })
+}
+getGitHubProfileInfos()
