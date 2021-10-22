@@ -1,7 +1,7 @@
 const linksSocialMedia = {
   linkedin: 'in/otafaria',
   facebook: 'otavio.a.faria',
-  github: 'zGroda'
+  github: 'k1wizera'
 }
 
 function changeSocialMediaLinks() {
