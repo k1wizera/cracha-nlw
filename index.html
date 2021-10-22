@@ -22,16 +22,17 @@
         </div>
 
         <h1 id="userName">Otávio Faria</h1>
-        <a href="https://github.com/k1wizera" target="_blank">
+        <a id="userLink" href="https://github.com/k1wizera" target="_blank">
           <img
             src="images/github.svg"
             alt="github icon"
             height="48px"
             width="48px"
+            id="userImage"
           />
-          @k1wizera</a
-        >
-        <p>
+          <span id="userLogin"> k1wizera </span>
+        </a>
+        <p id="userBio">
           An IT student interested in C#, .Net, SQL Server, Javascript, Angular
           and DevOps
         </p>
@@ -66,20 +67,6 @@
         </ul>
       </div>
     </main>
-    <script>
-      const linksSocialMedia = {
-        linkedin: 'in/igor-m-machado',
-        facebook: 'Matheus.Groda'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `http://${social}.com/${linksSocialMedia[social]}`
-        }
-      }
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
